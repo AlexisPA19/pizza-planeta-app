@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-import './pizza_component.css';
+import './facturaPDF.css';
 
 class FacturaPDF extends Component {
   constructor(props){
@@ -16,9 +16,13 @@ class FacturaPDF extends Component {
 
           <div className="facturaPDF">
             <h1>¡Tu compra fue generada exitosamente!</h1>
+            <br/>
             <h5>Descarga tu comprobante</h5>
-            <svg-icon><src href="svg/si-glyph-bed.svg"/></svg-icon>
-            <span className="glyphicon glyphicon-download-alt"></span>
+            <br/>
+            <a href="">
+              <img src="/iconfinder_pdfs_774684.png"/>
+              <img src="/iconfinder_24_171492.png"/>
+            </a>
           </div>
     );
   }

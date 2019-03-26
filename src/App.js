@@ -14,15 +14,15 @@ class App extends Component {
     return (
       <Router>
           <div className="App">
-            <div id="navbar">
-              <nav class="navbar navbar-expand-lg navbar-light ">
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav">
-                    <li class="nav-item">
-                      <Link class="nav-link" to={'/carritoCompra'}>Carrito</Link>
+            <div id="navbarNav">
+              <nav id="navbarNav" className="navbar navbar-expand-lg ">
+                <div className="collapse navbar-collapse" id="navbarNav">
+                  <ul  id="navbarNav" className="navbar-nav">
+                    <li className="nav-item" id="botonPrinc">
+                      <Link id="link" className="nav-link" to={'/carritoCompra'}>Carrito</Link>
                     </li>
-                    <li class="nav-item">
-                      <Link class="nav-link" to={'/'}>Menú</Link>
+                    <li className="nav-item" id="botonPrinc">
+                      <Link id="link" className="nav-link" to={'/'}>Menú</Link>
                     </li>
                   </ul>
                 </div>
