@@ -73,7 +73,7 @@ class MetodoPago extends Component {
                 <Link className="btn btn-default" to={'/datosCompra'}>Regresar</Link>
                 </div>
                 <div className="col-sm-3">
-                  <a href="" className="btn" role="button">Continuar</a>
+                  <Link className="btn btn-default" to={'/facturaPDF'}>Continuar</Link>
                 </div>
               </div>
             </form>
