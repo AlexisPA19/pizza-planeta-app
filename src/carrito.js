@@ -25,13 +25,14 @@ class Carrito extends Component {
                 <th>Tamaño</th>
                 <th>Masa</th>
                 <th>Precio</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
             {
                     this.state.pizzas.map(pizza => {
                         return(
-                                <PizzaCarritoComponent key={pizza.pizzaId} nomPizza={pizza.nomPizza} descripPizza={pizza.descripPizza} tamPiza={pizza.tamPiza} tipoMasa={pizza.tipoMasa} Precio={pizza.Precio}/>
+                                <PizzaCarritoComponent key={pizza.pizzaId} nomPizza={pizza.nomPizza} descripPizza={pizza.descripPizza} tamPizza={pizza.tamPiza} tipoMasa={pizza.tipoMasa} Precio={pizza.Precio}/>
                         )
                     })
                 }
