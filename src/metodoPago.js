@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './metodoPago.css';
-
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 class MetodoPago extends Component {
     constructor(props) {
         super(props);
@@ -67,10 +67,10 @@ class MetodoPago extends Component {
               </div>
               <div className="form-group row">
                 <div className="col-sm-6">
-                  <a href="" className="btn" role="button">Cancelar</a>
+                  <Link className="btn btn-default" to={'/carritoCompra'}>Cancelar</Link>
                 </div>
                 <div className="col-sm-3">
-                  <a href="" className="btn" role="button">Regresar</a>
+                <Link className="btn btn-default" to={'/datosCompra'}>Regresar</Link>
                 </div>
                 <div className="col-sm-3">
                   <a href="" className="btn" role="button">Continuar</a>

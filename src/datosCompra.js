@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './datosCompra.css';
 
 class DatosCompra extends Component {
@@ -54,10 +55,10 @@ class DatosCompra extends Component {
               </div>
               <div className="form-group row">
                 <div className="col-sm-6">
-                  <a href="#" className="btn">Cancelar</a>
+                  <Link className="btn btn-default" to={'/carritoCompra'}>Cancelar</Link>
                 </div>
                 <div className="col-sm-6">
-                  <a href="#" className="btn">Continuar</a>
+                  <Link className="btn btn-default" to={'/metodoPago'}>Continuar</Link>
                 </div>
               </div>
             </form>
