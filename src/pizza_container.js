@@ -36,8 +36,6 @@ class PizzaContainer extends Component {
                             urlImg={pizza.urlImg}
                             />
                             </div>
-                            
-                            
                         )
                     })
                 }
