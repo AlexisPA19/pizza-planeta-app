@@ -4,18 +4,18 @@
 }
 
 #botonPrinc{
-	background-color: #EFEFEF;
+	background-color: #070D59;
 	border-radius: 5px;
-	border-color: #070D59;
+	border-color: #1F3C88;
 	border-style: solid;
 }
 
 #navbarNav{
 	height: 35px;
-	background-color: #070D59;
+	background-color: #1F3C88;
 }
 
 #link{
-	color: #070D59;
+	color: #EFEFEF;
 	text-align: center;
 }

@@ -82,7 +82,7 @@ class PersonalizaPizza extends Component {
                       Pizza agregada correctamente
                     </div>
                   </div>
-                    <Link className="btn" to={'/'}>Aceptar</Link>
+                    <Link id="boton" className="btn" to={'/'}>Aceptar</Link>
                 </div>
               </div>
             </div>

@@ -13,4 +13,6 @@
 
 #select{
 	width: 150px;
+	border-color: #EFEFEF;
+	border-style: solid;
 }
