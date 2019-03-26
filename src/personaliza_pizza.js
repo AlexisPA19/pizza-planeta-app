@@ -29,9 +29,9 @@ class PersonalizaPizza extends Component {
             <h5>Los campos marcados con * son obligatorios</h5>
             <form onSubmit={this.handleSubmit}>
               <div className="form-group row">
-                <label for="staticEmail" className="col-sm-2 col-form-label">* Elige el tamaño de tu pizza</label>
-                <div className="col-sm-10">
-                  <select className="form-control" value={this.state.value} onChange={this.handleChange}>
+                <label for="staticEmail" className="col-sm-8 col-form-label">* Elige el tamaño de tu pizza</label>
+                <div className="col-sm-4">
+                  <select id="select" className="form-control" value={this.state.value} onChange={this.handleChange}>
                     <option value="Grande">Grande</option>
                     <option value="Mediana">Mediana</option>
                     <option value="Pequeña">Pequeña</option>
@@ -39,18 +39,18 @@ class PersonalizaPizza extends Component {
                 </div>
               </div>
               <div className="form-group row">
-                <label for="inputPassword" className="col-sm-2 col-form-label">* Seleccionar el tipo de masa</label>
-                <div className="col-sm-10">
-                  <select className="form-control" value={this.state.value} onChange={this.handleChange}>
+                <label for="inputPassword" className="col-sm-8 col-form-label">* Seleccionar el tipo de masa</label>
+                <div className="col-sm-4">
+                  <select id="select" className="form-control" value={this.state.value} onChange={this.handleChange}>
                       <option value="Sencilla">Sencilla</option>
                       <option value="Rellena">Rellena</option>
                   </select>
                 </div>
               </div>
               <div className="form-group row">
-                <label for="inputPassword" className="col-sm-2 col-form-label">* Cantidad de pizzas</label>
-                <div className="col-sm-10">
-                  <select className="form-control" value={this.state.value} onChange={this.handleChange}>
+                <label for="inputPassword" className="col-sm-8 col-form-label">* Cantidad de pizzas</label>
+                <div className="col-sm-4">
+                  <select id="select" className="form-control" value={this.state.value} onChange={this.handleChange}>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -65,11 +65,11 @@ class PersonalizaPizza extends Component {
                 </div>
               </div>
               <div className="form-row">
-                  <div className=" col-sm-6">
-                    <Link className="btn" role="button" to={'/'}>Cancelar</Link>
+                  <div className=" col-sm-7">
+                    <Link id="boton" className="btn" role="button" to={'/'}>Cancelar</Link>
                   </div>
-                  <div className="col-sm-6">
-                    <button type="button" className="btn" data-toggle="modal" data-target="#exampleModal">Agregar al carrito</button>
+                  <div className="col-sm-3">
+                    <button id="boton" type="button" className="btn" data-toggle="modal" data-target="#exampleModal">Agregar al carrito</button>
                   </div>
                 </div>
             </form>
