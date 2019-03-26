@@ -23,7 +23,7 @@ class PizzaComponent extends Component {
             <div className="row">
               <div className="col">
                 <br/>
-                <Link className="btn btn-light" to={'/personalizaPizza'}>Seleccionar</Link>
+                <Link className="btn" id="boton" to={'/personalizaPizza'}>Seleccionar</Link>
               </div>
             </div>
           </div>
