@@ -1,3 +1,21 @@
 .App{
   text-align: center;
+  
+}
+
+#botonPrinc{
+	background-color: #EFEFEF;
+	border-radius: 5px;
+	border-color: #070D59;
+	border-style: solid;
+}
+
+#navbarNav{
+	height: 30px;
+	background-color: #070D59;
+}
+
+#link{
+	color: #070D59;
+	text-align: center;
 }
