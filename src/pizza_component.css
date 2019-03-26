@@ -1,4 +1,12 @@
 #img-pizza{
   height: 100%;
   width: 50%;
+  border-color: #070D59;
+  border-style: dotted;
+}
+
+#boton{
+	color: #EFEFEF;
+	background-color: #070D59;
+	border-radius:;
 }
