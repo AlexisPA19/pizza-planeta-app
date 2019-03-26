@@ -38,19 +38,17 @@ class DatosCompra extends Component {
               <div className="form-group row">
                 <label for="staticEmail" className="col-sm-2 col-form-label">* Nombre</label>
                 <div className="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email"/>
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>
+                    <input type="text" class="form-control" id="inputEmail4" placeholder="Nombre - Apellidos"/>
                 </div>
               </div>
               <div className="form-group row">
                 <label for="inputEmail4" className="col-sm-2 col-form-label">* Teléfono</label>
                 <div class="form-group col-md-4">
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email"/>
+                    <input type="tel" class="form-control" id="inputEmail4" placeholder=""/>
                 </div>
                 <label for="inputPassword4">* Correo</label>
                 <div class="form-group col-md-5">
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password"/>
+                    <input type="email" class="form-control" id="inputPassword4" placeholder="email@dom.dom"/>
                 </div>
               </div>
               <div className="form-group row">
