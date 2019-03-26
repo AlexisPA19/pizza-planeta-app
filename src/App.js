@@ -7,6 +7,7 @@ import Carrito from './carrito';
 import PersonalizaPizza from './personaliza_pizza';
 import DatosCompra from './datosCompra';
 import MetodoPago from './metodoPago';
+import FacturaPDF from './facturaPDF';
 
 class App extends Component {
   render() {
@@ -14,7 +15,7 @@ class App extends Component {
       <Router>
           <div className="App">
             <div id="navbar">
-              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <nav class="navbar navbar-expand-lg navbar-light ">
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav">
                     <li class="nav-item">
@@ -34,6 +35,7 @@ class App extends Component {
                   <Route path='/carritoCompra' component={Carrito} />
                   <Route path='/datosCompra' component={DatosCompra} />
                   <Route path='/metodoPago' component={MetodoPago} />
+                  <Route path='/facturaPDF' component={FacturaPDF} />
           </Switch>
         </div>
       </Router>
