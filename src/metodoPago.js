@@ -34,7 +34,7 @@ class MetodoPago extends Component {
               <div className="form-group row">
                 <label for="staticEmail" className="col-sm-2 col-form-label">* Numero de tarjeta</label>
                 <div className="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email"/>
+                    <input type="text" class="form-control" id="numTarj" placeholder="XXXX-XXX-XXX-XXX"/>
                 </div>
               </div>
               <div className="form-group row">
