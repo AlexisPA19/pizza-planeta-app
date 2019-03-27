@@ -109,7 +109,7 @@ class DatosCompra extends Component {
               <div className="form-group row">
                 <label for="staticEmail" className="col-sm-2 col-form-label">* Tipo de entrega</label>
                 <div className="col-sm-3">
-                  <select className="form-control"  onClick={this.handleToggleClick}>
+                  <select className="form-control"  onChange={this.handleToggleClick}>
                     <option value="sucursal">En sucursal</option>
                     <option value="domicilio" onClick={this.handleToggleClick}>A domicilio</option>
                   </select>
