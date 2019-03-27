@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './carrito.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import PizzaCarritoComponent from './pizzaCarritoComponent';
 class Carrito extends Component {
@@ -50,10 +50,10 @@ class Carrito extends Component {
                 </div>
                 <div className="row">
                   <div className="col">
-                    <Link className="btn btn-default" to={'/'}>Seguir comprando</Link>
+                    <Link id="boton" className="btn btn-default" to={'/'}>Seguir comprando</Link>
                   </div>
                   <div className="col">
-                    <Link className="btn btn-default" to={'/datosCompra'}>Proceder con la compra</Link>
+                    <Link  id="boton" className="btn btn-default" to={'/datosCompra'}>Proceder con la compra</Link>
                   </div>
                 </div>
                 <div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

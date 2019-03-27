@@ -53,10 +53,10 @@ class DatosCompra extends Component {
               </div>
               <div className="form-group row">
                 <div className="col-sm-6">
-                  <Link className="btn btn-default" to={'/carritoCompra'}>Cancelar</Link>
+                  <Link id="boton" className="btn btn-default" to={'/carritoCompra'}>Cancelar</Link>
                 </div>
                 <div className="col-sm-6">
-                  <Link className="btn btn-default" to={'/metodoPago'}>Continuar</Link>
+                  <Link id="boton" className="btn btn-default" to={'/metodoPago'}>Continuar</Link>
                 </div>
               </div>
             </form>

@@ -40,7 +40,7 @@ class MetodoPago extends Component {
               <div className="form-group row">
                 <label for="staticEmail" className="col-sm-2 col-form-label">* Titular</label>
                 <div className="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email"/>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Nombre del titular de la tarjeta"/>
                 </div>
               </div>
               <div className="form-group row">
@@ -50,7 +50,7 @@ class MetodoPago extends Component {
                 </div>
                 <label for="inputPassword4">* CVC</label>
                 <div class="form-group col-md-5">
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password"/>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="XXX"/>
                 </div>
               </div>
               <div className="form-group row">
@@ -67,13 +67,13 @@ class MetodoPago extends Component {
               </div>
               <div className="form-group row">
                 <div className="col-sm-6">
-                  <Link className="btn btn-default" to={'/carritoCompra'}>Cancelar</Link>
+                  <Link id="boton" className="btn btn-default" to={'/carritoCompra'}>Cancelar</Link>
                 </div>
                 <div className="col-sm-3">
-                <Link className="btn btn-default" to={'/datosCompra'}>Regresar</Link>
+                <Link id="boton" className="btn btn-default" to={'/datosCompra'}>Regresar</Link>
                 </div>
                 <div className="col-sm-3">
-                  <Link className="btn btn-default" to={'/facturaPDF'}>Continuar</Link>
+                  <Link id="boton" className="btn btn-default" to={'/facturaPDF'}>Continuar</Link>
                 </div>
               </div>
             </form>
