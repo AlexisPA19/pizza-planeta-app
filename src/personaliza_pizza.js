@@ -79,7 +79,7 @@ class PersonalizaPizza extends Component {
                     <h5 className="modal-title" id="exampleModalLabel">EXITO</h5>
                   <div className="modal-body">
                     <div class="alert alert-success" role="alert">
-                      Pizza agregada correctamente
+                      Pizza agregada correctamente.
                     </div>
                   </div>
                     <Link id="boton"  className="btn">Aceptar</Link>

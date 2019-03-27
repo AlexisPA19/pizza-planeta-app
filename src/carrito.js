@@ -62,7 +62,7 @@ class Carrito extends Component {
                         <h5 className="modal-title" id="exampleModalLabel">Advertencia</h5>
                       <div className="modal-body">
                         <div class="alert alert-warning" role="alert">
-                          ¿Seguro que deseas quidar la pizza?
+                          ¿Seguro deseas quidar la pizza?
                         </div>
                       </div>
                       <div className="row">
