@@ -13,9 +13,14 @@ code {
 #header{
   height: 120px;
   background-color: aliceblue;
-  background-image: url("https://raw.githubusercontent.com/Averizer/PizzaGit/master/imagenes/iconografia/Header.png");
+  background: url("https://raw.githubusercontent.com/Averizer/PizzaGit/master/imagenes/iconografia/Header.png") no-repeat fixed center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-position: center;
+  height: 100%;
+  width: 100% ;
+  text-align: center;
   min-height: 120px;
 }
 #navbar{

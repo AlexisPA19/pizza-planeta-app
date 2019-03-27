@@ -20,8 +20,8 @@ class FacturaPDF extends Component {
             <h5>Descarga tu comprobante</h5>
             <br/>
             <a href="">
-              <img src="/iconfinder_pdfs_774684.png"/>
-              <img src="/iconfinder_24_171492.png"/>
+              <img src="https://github.com/AlexisPA19/pizza-planeta-app/blob/master/public/iconfinder_pdfs_774684.png?raw=true"/>
+              <img src="https://github.com/AlexisPA19/pizza-planeta-app/blob/master/public/iconfinder_24_171492.png?raw=true"/>
             </a>
           </div>
     );
