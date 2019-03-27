@@ -12,23 +12,23 @@ function WarningBanner(props) {
       <div className="form-group row">
         <label for="inputEmail4" className="col-sm-2 col-form-label">* Numero</label>
         <div class="form-group col-md-2">
-            <input type="tel" class="form-control" id="inputEmail4" placeholder=""/>
+            <input type="tel" class="form-control" id="inputEmail4" placeholder="" required/>
         </div>
         <label for="inputPassword4">* CP</label>
         <div class="form-group col-md-2">
-            <input type="email" class="form-control" id="inputPassword4" placeholder=""/>
+            <input type="email" class="form-control" id="inputPassword4" placeholder="" required/>
         </div>
       </div>
       <div className="form-group row">
         <label for="staticEmail" className="col-sm-2 col-form-label">* Colonia</label>
         <div className="col-sm-10">
-            <input type="text" class="form-control" id="inputEmail4" placeholder=""/>
+            <input type="text" class="form-control" id="inputEmail4" placeholder="" required/>
         </div>
       </div>
       <div className="form-group row">
         <label for="staticEmail" className="col-sm-2 col-form-label">* Delegación o municipio</label>
         <div className="col-sm-10">
-            <input type="text" class="form-control" id="inputEmail4" placeholder=""/>
+            <input type="text" class="form-control" id="inputEmail4" placeholder="" required/>
         </div>
       </div>
       <div className="form-group row">
@@ -72,11 +72,26 @@ function WarningBanner(props) {
           </select>
         </div>
       </div>
-    </div>
-
-    
+    </div>    
   );
 }
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
 class DatosCompra extends Component {
     constructor(props) {
         super(props);
@@ -105,7 +120,7 @@ class DatosCompra extends Component {
           <div id="datosForm">
             <h3>Agrega tus datos para proceder con la compra</h3>
             <h5>Los campos marcados con * son obligatorios</h5>
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit} class="needs-validation" novalidate>
               <div className="form-group row">
                 <label for="staticEmail" className="col-sm-2 col-form-label">* Tipo de entrega</label>
                 <div className="col-sm-3">
@@ -118,17 +133,19 @@ class DatosCompra extends Component {
               <div className="form-group row">
                 <label for="staticEmail" className="col-sm-2 col-form-label">* Nombre</label>
                 <div className="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail4" placeholder="Nombre - Apellidos"/>
+                    <input type="text" class="form-control" placeholder="Nombre - Apellidos"  id="uname"  name="uname" required/>
                 </div>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
               </div>
               <div className="form-group row">
                 <label for="inputEmail4" className="col-sm-2 col-form-label">* Teléfono</label>
                 <div class="form-group col-md-4">
-                    <input type="tel" class="form-control" id="inputEmail4" placeholder=""/>
+                    <input type="tel" class="form-control" id="inputEmail4" placeholder="" required/>
                 </div>
                 <label for="inputPassword4">* Correo</label>
                 <div class="form-group col-md-5">
-                    <input type="email" class="form-control" id="inputPassword4" placeholder="email@dom.dom"/>
+                    <input type="email" class="form-control" id="inputPassword4" placeholder="email@dom.dom" required/>
                 </div>
               </div>
                 <WarningBanner warn={this.state.showWarning} />
@@ -137,7 +154,8 @@ class DatosCompra extends Component {
                   <Link id="boton" className="btn btn-default" to={'/carritoCompra'}>Cancelar</Link>
                 </div>
                 <div className="col-sm-6">
-                  <Link id="boton" className="btn btn-default" to={'/metodoPago'}>Continuar</Link>
+                
+                  <Link id="boton"  className="btn btn-default" to={'/metodoPago'} >Continuar</Link>
                 </div>
               </div>
             </form>

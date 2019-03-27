@@ -22,6 +22,27 @@ constructor(props){
             <td>{this.tipoMasa}</td>
             <td>{this.precio}</td>
             <td><button className="btn btn-danger" data-toggle="modal" data-target="#exampleModal" data-backdrop="static">Eliminar</button></td>
+            <div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div className="modal-dialog" role="document">
+                <div className="modal-content">
+                    <h5 className="modal-title" id="exampleModalLabel">Advertencia</h5>
+                  <div className="modal-body">
+                    <div class="alert alert-warning" role="alert">
+                      ¿Seguro deseas quidar la pizza?
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    </div>
+                    <div className="col">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Aceptar</button>
+                    </div>
+                  </div>
+                  <br/>
+                </div>
+              </div>
+            </div>
         </tr>
     );
   }
