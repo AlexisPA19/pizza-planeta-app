@@ -21,7 +21,7 @@ constructor(props){
             <td>{this.tamPizza}</td>
             <td>{this.tipoMasa}</td>
             <td>{this.precio}</td>
-            <td><button className="btn btn-danger">Eliminar</button></td>
+            <td><button className="btn btn-danger" data-toggle="modal" data-target="#exampleModal" data-backdrop="static">Eliminar</button></td>
         </tr>
     );
   }

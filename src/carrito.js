@@ -56,9 +56,29 @@ class Carrito extends Component {
                     <Link className="btn btn-default" to={'/datosCompra'}>Proceder con la compra</Link>
                   </div>
                 </div>
+                <div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div className="modal-dialog" role="document">
+                    <div className="modal-content">
+                        <h5 className="modal-title" id="exampleModalLabel">Advertencia</h5>
+                      <div className="modal-body">
+                        <div class="alert alert-warning" role="alert">
+                          ¿Seguro que deseas quidar la pizza?
+                        </div>
+                      </div>
+                      <div className="row">
+                        <div className="col">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        </div>
+                        <div className="col">
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">Aceptar</button>
+                        </div>
+                      </div>
+                      <br/>
+                    </div>
+                  </div>
+                </div>
         </div>
     );
   }
 }
-
 export default Carrito;

@@ -69,7 +69,7 @@ class PersonalizaPizza extends Component {
                     <Link id="boton" className="btn" role="button" to={'/'}>Cancelar</Link>
                   </div>
                   <div className="col-sm-3">
-                    <button id="boton" type="button" className="btn" data-toggle="modal" data-target="#exampleModal">Agregar al carrito</button>
+                    <button id="boton" type="button" className="btn" data-toggle="modal" data-target="#exampleModal" data-backdrop="false">Agregar al carrito</button>
                   </div>
                 </div>
             </form>
@@ -82,7 +82,7 @@ class PersonalizaPizza extends Component {
                       Pizza agregada correctamente
                     </div>
                   </div>
-                    <Link id="boton" className="btn" to={'/'}>Aceptar</Link>
+                    <Link id="boton"  className="btn">Aceptar</Link>
                 </div>
               </div>
             </div>
