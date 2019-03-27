@@ -8,11 +8,12 @@ var suma =0;
 class Carrito extends Component {
   constructor () {
     super();
+    suma=0;
     this.state = {
         pizzas: [
-            {pizzaId:1, nomPizza:'Hawaiana', descripPizza:'Piña y jamón', tamPiza:'Grande', tipoMasa:'Queso', cant:1, Precio:200},
+            {pizzaId:1, nomPizza:'Hawaiana', descripPizza:'Piña y jamón', tamPiza:'Grande', tipoMasa:'Queso', cant:4, Precio:200},
             {pizzaId:2, nomPizza:'Pepperoni', descripPizza:'Queso...', tamPiza:'Chica', tipoMasa:'Queso',cant:2, Precio:200},
-            {pizzaId:3, nomPizza:'Pepperoni', descripPizza:'Queso...', tamPiza:'Chica', tipoMasa:'Queso', cant:1,Precio:200}
+            {pizzaId:3, nomPizza:'Pepperoni', descripPizza:'Queso...', tamPiza:'Chica', tipoMasa:'Queso', cant:3,Precio:200}
         ]
     }
 }
@@ -41,10 +42,9 @@ class Carrito extends Component {
                     })
             }
             {
-                      
+              
               this.state.pizzas.map(pizza=>{
-                  suma = suma + pizza.Precio*pizza.cant
-                
+                  suma = suma + pizza.Precio*pizza.cant;
               })
             }
             <td></td>
