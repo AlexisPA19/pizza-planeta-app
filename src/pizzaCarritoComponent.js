@@ -14,6 +14,7 @@ constructor(props){
     this.cant = props.cant;
     this.precio = props.Precio;
 }
+
   render() {
     return (
         <tr>
@@ -22,7 +23,7 @@ constructor(props){
             <td>{this.tamPizza}</td>
             <td>{this.tipoMasa}</td>
             <td>{this.cant}</td>
-            <td>{this.precio}</td>
+            <td>${this.precio}</td>
             <td><button className="btn btn-danger" data-toggle="modal" data-target="#exampleModal" data-backdrop="static">Eliminar</button></td>
             <div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div className="modal-dialog" role="document">
@@ -38,7 +39,7 @@ constructor(props){
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                     </div>
                     <div className="col">
-                      <button type="button" class="btn btn-danger" data-dismiss="modal">Aceptar</button>
+                      <button type="button" class="btn btn-danger" data-dismiss="modal" >Aceptar</button>
                     </div>
                   </div>
                   <br/>

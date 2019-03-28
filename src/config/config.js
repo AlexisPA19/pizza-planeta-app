@@ -5,4 +5,4 @@ export const DB_CONFIG = {
   projectId: "pizza-planeta-7be5c",
   storageBucket: "pizza-planeta-7be5c.appspot.com",
   messagingSenderId: "977260831032"
-  };
+}
