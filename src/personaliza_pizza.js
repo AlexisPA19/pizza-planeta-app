@@ -27,10 +27,9 @@ class PersonalizaPizza extends Component {
     if (!firebase.apps.length) {
       firebase.initializeApp(config);
   }
-    
   }
   enviar(){
-    const form = document.getElementById('PerzonalizaPizzaForm'); // Obtenemos la referencia al formulario
+    const form = document.getElementByName('PerzonalizaPizzaForm'); // Obtenemos la referencia al formulario
 
     if(form){ // Si existe nuestro elemento en memoria este se quedara escuchando al evento submit del formulario
       form.addEventListener('submit', PerzonalizaPizzaForm); // Al momento de enviar el formulario, ejecuta la función "contactform"
@@ -68,7 +67,7 @@ class PersonalizaPizza extends Component {
           <div id="perzonalizarForm">
             <h3>Personaliza tu pizza</h3>
             <h5>Los campos marcados con * son obligatorios</h5>
-            <form id="PerzonalizaPizzaForm">
+            <form id="PerzonalizaPizzaForm" name="PerzonalizaPizzaForm">
               <div className="form-group row">
                 <label for="staticEmail" className="col-sm-8 col-form-label">* Elige el tamaño de tu pizza</label>
                 <div className="col-sm-4">
