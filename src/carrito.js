@@ -22,15 +22,10 @@ class Carrito extends Component {
     //this.addPizza = this.addPizza.bind(this);
     this.removepizza = this.removePizza.bind(this);
     // db connection
-
+    this.app = firebase.initializeApp(DB_CONFIG);
+    this.db = this.app.database().ref().child('compras');
 }
-componentWillMount(){
 
-  this.app = firebase.initializeApp(DB_CONFIG);
-  this.db = this.app.database().ref().child('compras');
-
-
-}
 componentDidMount() {
   const { pizzas } = this.state;
   this.db.on('child_added', snap => {
@@ -59,7 +54,7 @@ componentDidMount() {
 
 }
 removePizza(pizzaId) {
-  this.db.child(pizzaId).remove();
+  firebase.database().ref('compras/'+pizzaId).remove();
 }
 _getTotal(){
   return _.sumBy(this.state.pizzas, function(o) { return o.Precio*o.cant; });;

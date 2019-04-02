@@ -42,7 +42,7 @@ handleRemovePizza(id) {
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                     </div>
                     <div className="col">
-                      <button type="button" class="btn btn-danger" data-dismiss="modal" onClick={() => this.handleRemovePizza(this.pizzaId)}>Aceptar</button>
+                      <button type="button" class="btn btn-danger" data-dismiss="modal" onClick={() => this.handleRemovePizza(this.pizzaId)} >Aceptar</button>
                     </div>
                   </div>
                   <br/>

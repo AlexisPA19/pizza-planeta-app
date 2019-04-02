@@ -51,11 +51,11 @@ class PersonalizaPizza extends Component {
       const cant = document.getElementsByName("cant");
       const data = {
         'nomPizza':'Hawaiana',
-        'descripPizza':'Jamón y piña',
+        'descripPizza':'Jamón y Jamón',
         'tamPizza': 'Grande',
         'tipoMasa': 'Queso',
         'cant': 3,
-        'Precio':'200'
+        'Precio':200
       }; // Creamos un objecto con todos los elementos de nuestro formulario.
       savePerzonalizaPizzaForm(data); // Enviamos la información obtenida por el usuario a la función que se encargara de guardar la información en Firebase
       form.reset(); // borramos todos los campos. 
