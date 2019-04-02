@@ -14,20 +14,14 @@ class Carrito extends Component {
     super();
     this.state = {
         pizzas: [
-            //{pizzaId:'hML87ffjLhnX1GMOEyU7', nomPizza:'Hawaiana', descripPizza:'Piña y jamón', tamPiza:'Grande', tipoMasa:'Queso', cant:4, Precio:200},
-            //{pizzaId:2, nomPizza:'Pepperoni', descripPizza:'Queso...', tamPiza:'Chica', tipoMasa:'Queso',cant:2, Precio:200},
-            //{pizzaId:3, nomPizza:'Pepperoni', descripPizza:'Queso...', tamPiza:'Chica', tipoMasa:'Queso', cant:3,Precio:200}
+
         ]
     }
-    //this.addPizza = this.addPizza.bind(this);
     this.removepizza = this.removePizza.bind(this);
     // db connection
     if (!firebase.apps.length) {
       this.app = firebase.initializeApp(DB_CONFIG);
   }
-      
-  
-    //this.db = this.app.database().ref().child('compras');
 }
 
 componentDidMount() {

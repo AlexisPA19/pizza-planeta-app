@@ -13,7 +13,7 @@ code {
 #header{
   height: 120px;
   background-color: aliceblue;
-  background: url("https://raw.githubusercontent.com/Averizer/PizzaGit/master/imagenes/iconografia/Header.png") no-repeat fixed center;
+  background: url("/PizzaPlaneta.png") no-repeat  center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
