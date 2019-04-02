@@ -22,10 +22,15 @@ class Carrito extends Component {
     //this.addPizza = this.addPizza.bind(this);
     this.removepizza = this.removePizza.bind(this);
     // db connection
-		this.app = firebase.initializeApp(DB_CONFIG);
-		this.db = this.app.database().ref().child('compras');
-}
 
+}
+componentWillMount(){
+
+  this.app = firebase.initializeApp(DB_CONFIG);
+  this.db = this.app.database().ref().child('compras1');
+
+
+}
 componentDidMount() {
   const { pizzas } = this.state;
   this.db.on('child_added', snap => {
