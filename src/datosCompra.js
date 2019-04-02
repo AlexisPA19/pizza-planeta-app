@@ -14,11 +14,11 @@ function WarningBanner(props) {
       <div className="form-group row">
         <label for="inputEmail4" className="col-sm-2 col-form-label">* Numero</label>
         <div class="form-group col-md-2">
-            <input type="tel" class="form-control" id="inputEmail4" placeholder="" required/>
+            <input type="number" class="form-control" id="inputEmail4" placeholder="" required/>
         </div>
         <label for="inputPassword4">* CP</label>
         <div class="form-group col-md-2">
-            <input type="email" class="form-control" id="inputPassword4" placeholder="" required/>
+            <input type="number" class="form-control" id="inputPassword4" placeholder="" required/>
         </div>
       </div>
       <div className="form-group row">
@@ -117,7 +117,7 @@ class DatosCompra extends Component {
               <div className="form-group row">
                 <label for="inputEmail4" className="col-sm-2 col-form-label">* Teléfono</label>
                 <div class="form-group col-md-4">
-                    <input type="tel" class="form-control" id="inputEmail4" placeholder="" required/>
+                    <input type="number" class="form-control" id="inputEmail4" placeholder="" required/>
                 </div>
                 <label for="inputPassword4">* Correo</label>
                 <div class="form-group col-md-5">

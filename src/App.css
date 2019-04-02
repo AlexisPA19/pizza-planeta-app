@@ -2,18 +2,13 @@
   text-align: center;
   
 }
-
-@media (max-width: 450px)
-{
-		
 	#botonPrinc{
-		clear: both;
 		background-color: #070D59;
 		border-radius: 5px;
 		border-color: #1F3C88;
 		border-style: solid;
 	}
-}
+
 
 #navbarNav{
 	height: 35px;
