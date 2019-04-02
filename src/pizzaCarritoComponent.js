@@ -5,7 +5,7 @@ import './App.css';
 class PizzaCarritoCompra extends Component {
 constructor(props){
     super(props);
-    this.pizzaId = props.key;
+    this.pizzaId = props.pizzaId;
     this.nomPizza = props.nomPizza;
     this.descripPizza = props.descripPizza;
     this.tamPizza = props.tamPizza;
@@ -13,13 +13,14 @@ constructor(props){
     this.cant = props.cant;
     this.precio = props.Precio;
 }
-handleRemoveNote(id) {
+handleRemovePizza(id) {
   this.props.removePizza(id);
 }
 
   render() {
     return (
         <tr>
+            <td>{this.pizzaId}</td>
             <td>{this.nomPizza}</td>
             <td>{this.descripPizza}</td>
             <td>{this.tamPizza}</td>
@@ -41,7 +42,7 @@ handleRemoveNote(id) {
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                     </div>
                     <div className="col">
-                      <button type="button" class="btn btn-danger" data-dismiss="modal" onClick={() => this.handleRemoveNote(this.pizzaId)}>Aceptar</button>
+                      <button type="button" class="btn btn-danger" data-dismiss="modal" onClick={() => this.handleRemovePizza(this.pizzaId)}>Aceptar</button>
                     </div>
                   </div>
                   <br/>

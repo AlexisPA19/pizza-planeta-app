@@ -27,7 +27,7 @@ class Carrito extends Component {
 componentWillMount(){
 
   this.app = firebase.initializeApp(DB_CONFIG);
-  this.db = this.app.database().ref().child('compras1');
+  this.db = this.app.database().ref().child('compras');
 
 
 }
@@ -80,6 +80,7 @@ _getTotal(){
             <table class="table table-striped">
               <thead>
                 <tr>
+                  <th>ID</th>
                   <th>Pizza</th>
                   <th>Ingredientes</th>
                   <th>Tamaño</th>
@@ -91,7 +92,7 @@ _getTotal(){
               </thead>
               <tbody>
               {
-                      this.state.pizzas.map((pizza,index) => {
+                      this.state.pizzas.map(pizza => {
                           return(
                           <PizzaCarritoComponent key={pizza.pizzaId} pizzaId={pizza.pizzaId} nomPizza={pizza.nomPizza} descripPizza={pizza.descripPizza} tamPizza={pizza.tamPizza} tipoMasa={pizza.tipoMasa} cant={pizza.cant} Precio={pizza.Precio} removePizza={this.removePizza}/>
                           )

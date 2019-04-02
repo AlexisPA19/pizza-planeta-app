@@ -9,6 +9,7 @@ import firebase from 'firebase/app';
 import { DB_CONFIG } from './config/config';
 import 'firebase/database';
 
+
 class PersonalizaPizza extends Component {
   constructor () {
     super();
@@ -27,46 +28,55 @@ class PersonalizaPizza extends Component {
       messagingSenderId: "977260831032"
     };
     firebase.initializeApp(config);
+    firebase.database().ref('compras1/005').set(
+      {
+        nomPizza:'Hawaiana',
+        Precio: '200'
+  
+      }
+    )
   }
   enviar(){
-    const form = document.getElementsById('PerzonalizaPizzaForm');
+  
+    const form = document.getElementById('PerzonalizaPizzaForm'); // Obtenemos la referencia al formulario
+
     if(form){ // Si existe nuestro elemento en memoria este se quedara escuchando al evento submit del formulario
       form.addEventListener('submit', PerzonalizaPizzaForm); // Al momento de enviar el formulario, ejecuta la función "contactform"
     }
-  
+
     function PerzonalizaPizzaForm(event) {
       event.preventDefault(); // Prevenimos el comportamiento por defecto de un formulario (Enviar por URL los parametros)
       const tamPizza = document.getElementsByName("tamPizza"); // Obtenemos la referencia a cada uno de nuestros elementos del formulario
-      const tipoMasa = document.getElementsByName('tipoMasa');
-      const cant = document.getElementsByName('cant');
+      const tipoMasa = document.getElementsByName("tipoMasa");
+      const cant = document.getElementsByName("cant");
       const data = {
-  
-        'tamPizza': tamPizza.value,
-        'tipoMasa': tipoMasa.value,
-        'cant': cant.value
-  
+        'nomPizza':'Hawaiana',
+        'descripPizza':'Jamón y piña',
+        'tamPizza': 'Grande',
+        'tipoMasa': 'Queso',
+        'cant': 3,
+        'Precio':'200'
       }; // Creamos un objecto con todos los elementos de nuestro formulario.
       savePerzonalizaPizzaForm(data); // Enviamos la información obtenida por el usuario a la función que se encargara de guardar la información en Firebase
       form.reset(); // borramos todos los campos. 
     }
-  
+
   function savePerzonalizaPizzaForm(data) {
     firebase.database().ref('compras').push(data) // Hacemos referencia al método database de el SDK y hacemos referencia el nombre del objeto que contendrá nuestros registros y empujamos los nuevos envios de datos
       .then(function(){
         //alert('mensaje guardado'); // Si la petición es correcta y almaceno los datos mostramos un mensaje al usuario.
       })
       .catch(function(){
-        //alert('mensaje No guardado'); // En caso de ocurrir un error le mostramos al usuario que ocurrió un error.
+        alert('mensaje No guardado'); // En caso de ocurrir un error le mostramos al usuario que ocurrió un error.
       });
   };
-  }
-
+}
       render() {
         return (
           <div id="perzonalizarForm">
             <h3>Personaliza tu pizza</h3>
             <h5>Los campos marcados con * son obligatorios</h5>
-            <form id="PerzonalizaPizzaForm" name="PerzonalizaPizzaForm">
+            <form id="PerzonalizaPizzaForm">
               <div className="form-group row">
                 <label for="staticEmail" className="col-sm-8 col-form-label">* Elige el tamaño de tu pizza</label>
                 <div className="col-sm-4">
