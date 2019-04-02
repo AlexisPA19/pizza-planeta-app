@@ -22,7 +22,10 @@ class Carrito extends Component {
     //this.addPizza = this.addPizza.bind(this);
     this.removepizza = this.removePizza.bind(this);
     // db connection
-    this.app = firebase.initializeApp(DB_CONFIG);
+    
+    if (!firebase.apps.length) {
+      this.app = firebase.initializeApp(DB_CONFIG);
+  }
     this.db = this.app.database().ref().child('compras');
 }
 

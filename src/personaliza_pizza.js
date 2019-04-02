@@ -27,14 +27,10 @@ class PersonalizaPizza extends Component {
       storageBucket: "pizza-planeta-7be5c.appspot.com",
       messagingSenderId: "977260831032"
     };
-    firebase.initializeApp(config);
-    firebase.database().ref('compras1/005').set(
-      {
-        nomPizza:'Hawaiana',
-        Precio: '200'
-  
-      }
-    )
+    if (!firebase.apps.length) {
+      firebase.initializeApp(config);
+  }
+    
   }
   enviar(){
   
@@ -50,12 +46,12 @@ class PersonalizaPizza extends Component {
       const tipoMasa = document.getElementsByName("tipoMasa");
       const cant = document.getElementsByName("cant");
       const data = {
-        'nomPizza':'Hawaiana',
-        'descripPizza':'Jamón y Jamón',
-        'tamPizza': 'Grande',
-        'tipoMasa': 'Queso',
+        'nomPizza':'Pepperoni',
+        'descripPizza':'Pepperoni y queso cheddar',
+        'tamPizza': 'Familar',
+        'tipoMasa': 'Sencilla',
         'cant': 3,
-        'Precio':200
+        'Precio':160
       }; // Creamos un objecto con todos los elementos de nuestro formulario.
       savePerzonalizaPizzaForm(data); // Enviamos la información obtenida por el usuario a la función que se encargara de guardar la información en Firebase
       form.reset(); // borramos todos los campos. 
