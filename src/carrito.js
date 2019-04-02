@@ -22,16 +22,17 @@ class Carrito extends Component {
     //this.addPizza = this.addPizza.bind(this);
     this.removepizza = this.removePizza.bind(this);
     // db connection
-    
     if (!firebase.apps.length) {
       this.app = firebase.initializeApp(DB_CONFIG);
   }
-    this.db = this.app.database().ref().child('compras');
+      
+  
+    //this.db = this.app.database().ref().child('compras');
 }
 
 componentDidMount() {
   const { pizzas } = this.state;
-  this.db.on('child_added', snap => {
+  firebase.database().ref('compras').on('child_added', snap => {
     pizzas.push({
       pizzaId: snap.key,
       nomPizza: snap.val().nomPizza,
@@ -45,7 +46,7 @@ componentDidMount() {
     this.setState({pizzas});
   });
 
-  this.db.on('child_removed', snap => {
+  firebase.database().ref('compras').on('child_removed', snap => {
     for(let i = 0; i < pizzas.length; i++) {
       if(pizzas[i].pizzaId === snap.key) {
         pizzas.splice(i , 1);

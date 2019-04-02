@@ -13,9 +13,6 @@ import 'firebase/database';
 class PersonalizaPizza extends Component {
   constructor () {
     super();
-    // db connection
-		//this.app = firebase.initializeApp(DB_CONFIG);
-		//this.db = this.app.database().ref().child('compras');
   }
   componentWillMount(){
     // Initialize Firebase
@@ -33,7 +30,6 @@ class PersonalizaPizza extends Component {
     
   }
   enviar(){
-  
     const form = document.getElementById('PerzonalizaPizzaForm'); // Obtenemos la referencia al formulario
 
     if(form){ // Si existe nuestro elemento en memoria este se quedara escuchando al evento submit del formulario
