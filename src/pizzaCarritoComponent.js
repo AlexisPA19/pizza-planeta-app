@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
 
 class PizzaCarritoCompra extends Component {
 constructor(props){
@@ -14,9 +13,8 @@ constructor(props){
     this.cant = props.cant;
     this.precio = props.Precio;
 }
-_remove(){
-  if(this.props.onRemove)
-      this.props.onRemove();
+handleRemoveNote(id) {
+  this.props.removePizza(id);
 }
 
   render() {
@@ -43,7 +41,7 @@ _remove(){
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                     </div>
                     <div className="col">
-                      <button type="button" class="btn btn-danger" data-dismiss="modal" onClick={this._remove.bind(this)}>Aceptar</button>
+                      <button type="button" class="btn btn-danger" data-dismiss="modal" onClick={() => this.handleRemoveNote(this.pizzaId)}>Aceptar</button>
                     </div>
                   </div>
                   <br/>

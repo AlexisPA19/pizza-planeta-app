@@ -5,16 +5,28 @@ import App from './App';
 
 import './personaliza_pizza.css';
 
+import firebase from 'firebase/app';
+import { DB_CONFIG } from './config/config';
+import 'firebase/database';
+
 class PersonalizaPizza extends Component {
-
-    
-
+  constructor () {
+    super();
+    this.addPizza = this.addPizza.bind(this);
+    // db connection
+		this.app = firebase.initializeApp(DB_CONFIG);
+		this.db = this.app.database().ref().child('compras');
+  }
+  addPizza(nomPizza,descripPizza,tamPizza,) {
+     this.db.push().set({nomPizza: nomPizza});
+      this.db.push().set({tamPizza: tamPizza});
+  }	
       render() {
         return (
           <div id="perzonalizarForm">
             <h3>Personaliza tu pizza</h3>
             <h5>Los campos marcados con * son obligatorios</h5>
-            <form onSubmit={this.handleSubmit}>
+            <form>
               <div className="form-group row">
                 <label for="staticEmail" className="col-sm-8 col-form-label">* Elige el tamaño de tu pizza</label>
                 <div className="col-sm-4">

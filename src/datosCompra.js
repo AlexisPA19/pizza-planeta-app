@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as  Link } from 'react-router-dom';
 import './datosCompra.css';
-
+import firebase from 'firebase';
 
 
 function WarningBanner(props) {
@@ -96,7 +96,7 @@ class DatosCompra extends Component {
           <div id="datosForm">
             <h3>Agrega tus datos para proceder con la compra</h3>
             <h5>Los campos marcados con * son obligatorios</h5>
-            <form onSubmit={this.handleSubmit} class="needs-validation" novalidate>
+            <form>
               <div className="form-group row">
                 <label for="staticEmail" className="col-sm-2 col-form-label">* Tipo de entrega</label>
                 <div className="col-sm-3">
