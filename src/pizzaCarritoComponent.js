@@ -20,7 +20,6 @@ handleRemovePizza(id) {
   render() {
     return (
         <tr>
-            <td>{this.pizzaId}</td>
             <td>{this.nomPizza}</td>
             <td>{this.descripPizza}</td>
             <td>{this.tamPizza}</td>

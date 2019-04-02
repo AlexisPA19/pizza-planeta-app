@@ -73,7 +73,6 @@ _getTotal(){
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th>ID</th>
                   <th>Pizza</th>
                   <th>Ingredientes</th>
                   <th>Tamaño</th>

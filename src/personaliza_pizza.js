@@ -29,7 +29,7 @@ class PersonalizaPizza extends Component {
   }
   }
   enviar(){
-    const form = document.getElementByName('PerzonalizaPizzaForm'); // Obtenemos la referencia al formulario
+    const form = document.getElementById('PerzonalizaPizzaForm'); // Obtenemos la referencia al formulario
 
     if(form){ // Si existe nuestro elemento en memoria este se quedara escuchando al evento submit del formulario
       form.addEventListener('submit', PerzonalizaPizzaForm); // Al momento de enviar el formulario, ejecuta la función "contactform"
@@ -37,15 +37,15 @@ class PersonalizaPizza extends Component {
 
     function PerzonalizaPizzaForm(event) {
       event.preventDefault(); // Prevenimos el comportamiento por defecto de un formulario (Enviar por URL los parametros)
-      const tamPizza = document.getElementsByName("tamPizza"); // Obtenemos la referencia a cada uno de nuestros elementos del formulario
-      const tipoMasa = document.getElementsByName("tipoMasa");
-      const cant = document.getElementsByName("cant");
+      const tamPizza = document.getElementById("tamPizza"); // Obtenemos la referencia a cada uno de nuestros elementos del formulario
+      const tipoMasa = document.getElementById("tipoMasa");
+      const cant = document.getElementById("cant");
       const data = {
         'nomPizza':'Pepperoni',
         'descripPizza':'Pepperoni y queso cheddar',
-        'tamPizza': 'Familar',
-        'tipoMasa': 'Sencilla',
-        'cant': 3,
+        'tamPizza': tamPizza.value,
+        'tipoMasa': tipoMasa.value,
+        'cant': cant.value,
         'Precio':160
       }; // Creamos un objecto con todos los elementos de nuestro formulario.
       savePerzonalizaPizzaForm(data); // Enviamos la información obtenida por el usuario a la función que se encargara de guardar la información en Firebase
@@ -67,11 +67,11 @@ class PersonalizaPizza extends Component {
           <div id="perzonalizarForm">
             <h3>Personaliza tu pizza</h3>
             <h5>Los campos marcados con * son obligatorios</h5>
-            <form id="PerzonalizaPizzaForm" name="PerzonalizaPizzaForm">
+            <form id="PerzonalizaPizzaForm">
               <div className="form-group row">
                 <label for="staticEmail" className="col-sm-8 col-form-label">* Elige el tamaño de tu pizza</label>
                 <div className="col-sm-4">
-                  <select id="select" name="tamPizza" className="form-control">
+                  <select id="tamPizza" name="tamPizza" className="form-control">
                     <option value="Grande">Grande</option>
                     <option value="Mediana">Mediana</option>
                     <option value="Pequeña">Pequeña</option>
@@ -81,7 +81,7 @@ class PersonalizaPizza extends Component {
               <div className="form-group row">
                 <label for="inputPassword" className="col-sm-8 col-form-label">* Seleccionar el tipo de masa</label>
                 <div className="col-sm-4">
-                  <select id="select" name="tipoMasa" className="form-control">
+                  <select id="tipoMasa" name="tipoMasa" className="form-control">
                       <option value="Sencilla">Sencilla</option>
                       <option value="Rellena">Rellena</option>
                   </select>
@@ -90,7 +90,7 @@ class PersonalizaPizza extends Component {
               <div className="form-group row">
                 <label for="inputPassword" className="col-sm-8 col-form-label">* Cantidad de pizzas</label>
                 <div className="col-sm-4">
-                  <select id="select" name="cant" className="form-control">
+                  <select id="cant" name="cant" className="form-control">
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
