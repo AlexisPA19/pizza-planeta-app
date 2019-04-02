@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './datosCompra.css';
 
+
+
 function WarningBanner(props) {
   if (!props.warn) {
     return null;
@@ -75,46 +77,20 @@ function WarningBanner(props) {
     </div>    
   );
 }
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Get the forms we want to add validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
+
 class DatosCompra extends Component {
     constructor(props) {
         super(props);
-        this.state = {value: ''};
 
         this.state = {showWarning: false}
         this.handleToggleClick = this.handleToggleClick.bind(this);
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+
       }
       handleToggleClick() {
         this.setState(prevState => ({
           showWarning: !prevState.showWarning
         }));
       }
-      handleChange(event) {
-
-      }
-    
-      handleSubmit(event) {
-        event.preventDefault();
-      }
-    
       render() {
         return (
           <div id="datosForm">

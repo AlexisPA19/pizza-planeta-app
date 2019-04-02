@@ -1,9 +1,14 @@
 #boton{
 	color: #EFEFEF;
 	background-color: #070D59;
-	border-radius:;
+	width: 200px;
+	text-align: center;
+	margin:0px auto;
 }
 table{
 	width: 50%;
+	text-align: center;
+}
+#div_vacio{
 	text-align: center;
 }

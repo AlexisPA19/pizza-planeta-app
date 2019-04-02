@@ -14,8 +14,9 @@ constructor(props){
     this.cant = props.cant;
     this.precio = props.Precio;
 }
-handleRemovePizza(id) {
-  this.props.removePizza(id);
+_remove(){
+  if(this.props.onRemove)
+      this.props.onRemove();
 }
 
   render() {
@@ -42,7 +43,7 @@ handleRemovePizza(id) {
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                     </div>
                     <div className="col">
-                      <button type="button" class="btn btn-danger" data-dismiss="modal" onClick={() => this.handleRemovePizza(this.pizzaId)}>Aceptar</button>
+                      <button type="button" class="btn btn-danger" data-dismiss="modal" onClick={this._remove.bind(this)}>Aceptar</button>
                     </div>
                   </div>
                   <br/>

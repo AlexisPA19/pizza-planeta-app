@@ -6,22 +6,9 @@ import App from './App';
 import './personaliza_pizza.css';
 
 class PersonalizaPizza extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-      }
-    
-      handleChange(event) {
 
-      }
     
-      handleSubmit(event) {
 
-        event.preventDefault();
-      }
       render() {
         return (
           <div id="perzonalizarForm">
@@ -31,7 +18,7 @@ class PersonalizaPizza extends Component {
               <div className="form-group row">
                 <label for="staticEmail" className="col-sm-8 col-form-label">* Elige el tamaño de tu pizza</label>
                 <div className="col-sm-4">
-                  <select id="select" className="form-control" value={this.state.value} onChange={this.handleChange}>
+                  <select id="select" className="form-control">
                     <option value="Grande">Grande</option>
                     <option value="Mediana">Mediana</option>
                     <option value="Pequeña">Pequeña</option>
@@ -41,7 +28,7 @@ class PersonalizaPizza extends Component {
               <div className="form-group row">
                 <label for="inputPassword" className="col-sm-8 col-form-label">* Seleccionar el tipo de masa</label>
                 <div className="col-sm-4">
-                  <select id="select" className="form-control" value={this.state.value} onChange={this.handleChange}>
+                  <select id="select" className="form-control">
                       <option value="Sencilla">Sencilla</option>
                       <option value="Rellena">Rellena</option>
                   </select>
@@ -50,7 +37,7 @@ class PersonalizaPizza extends Component {
               <div className="form-group row">
                 <label for="inputPassword" className="col-sm-8 col-form-label">* Cantidad de pizzas</label>
                 <div className="col-sm-4">
-                  <select id="select" className="form-control" value={this.state.value} onChange={this.handleChange}>
+                  <select id="select" className="form-control">
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
