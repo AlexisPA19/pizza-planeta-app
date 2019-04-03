@@ -13,7 +13,7 @@ code {
 #header{
   height: 120px;
   background-color: aliceblue;
-  background: url("/PizzaPlaneta.png") no-repeat  center;
+  background: url("https://github.com/AlexisPA19/pizza-planeta-app/blob/master/public/pizzaplaneta.png?raw=true") no-repeat  center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

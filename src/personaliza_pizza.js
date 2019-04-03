@@ -58,13 +58,28 @@ class PersonalizaPizza extends Component {
       const cant = document.getElementById("cant");
       const name = document.getElementById("nomPizza");
       const descripPizza = document.getElementById("descripPizza");
+      var precio;
+      if((tamPizza.value =='Grande')&&(tipoMasa.value=='Sencilla')){
+        precio = 99
+      }else if((tamPizza.value =='Mediana')&&(tipoMasa.value=='Sencilla')){
+        precio = 79
+      }else if((tamPizza.value =='Pequeña')&&(tipoMasa.value=='Sencilla')){
+        precio = 69
+      }else if((tamPizza.value =='Grande')&&(tipoMasa.value=='Rellena')){
+        precio = 180
+      }else if((tamPizza.value =='Mediana')&&(tipoMasa.value=='Rellena')){
+        precio = 90
+      }else{
+        precio = 80
+      }
+    
       const data = {
         'nomPizza': name.value,
         'descripPizza':descripPizza.value,
         'tamPizza': tamPizza.value,
         'tipoMasa': tipoMasa.value,
         'cant': cant.value,
-        'Precio':160
+        'Precio':precio
       }; // Creamos un objecto con todos los elementos de nuestro formulario.
       savePerzonalizaPizzaForm(data); // Enviamos la información obtenida por el usuario a la función que se encargara de guardar la información en Firebase
       form.reset(); // borramos todos los campos. 
