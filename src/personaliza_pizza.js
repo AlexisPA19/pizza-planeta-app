@@ -14,15 +14,23 @@ class PersonalizaPizza extends Component {
   constructor () {
     super();
     this.state = {
-      pizzas: [
-        {nomPizza:'Hola',descripPizza:'sadsa'}
-      ]
+      nom: null,
+      descrip : null
+    }
+    
   }
-  }
-  removePizza(nomPizza) {
-    //this.state.pizzas.nomPizza="Hola"
+ 
+  componentDidMount(){
+    const nombre = this.props.location.state
+ 
+    this.setState({
+      nom: JSON.stringify(nombre.nom),
+      descrip: JSON.stringify(nombre.descrip)
+    })
   }
   componentWillMount(){
+
+    
     // Initialize Firebase
     var config = {
       apiKey: "AIzaSyA2W5oUjErDfEn48kB9LsI6xa51I5-WQXs",
@@ -115,8 +123,8 @@ class PersonalizaPizza extends Component {
                 </div>
               </div>
               <div className="form-group row">
-                <input type="hidden" id="nomPizza" value={this.state.pizzas.nomPizza}>{this.state.pizzas.nomPizza}</input>
-                <input type="hidden" id="descripPizza" value={this.state.pizzas.descripPizza}>{this.state.pizzas.descripPizza}</input>
+                <input type="hidden" id="nomPizza" value={this.state.nom}/>
+                <input type="hidden" id="descripPizza" value={this.state.descrip} />
               </div>
               <div className="form-row">
                   <div className=" col-sm-7">

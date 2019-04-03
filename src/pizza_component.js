@@ -4,12 +4,15 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import './pizza_component.css';
 
+
+
 class PizzaComponent extends Component {
   constructor(props){
     super(props);
     this.pizzaId = props.pizzaId;
     this.nomPizza = props.nomPizza;
     this.urlImg = props.urlImg;
+    this.descripPizza=props.descripPizza
   }
   render() {
     return (
@@ -23,7 +26,14 @@ class PizzaComponent extends Component {
             <div className="row">
               <div className="col">
                 <br/>
-                <Link className="btn" id="boton" to={'/personalizaPizza'} >Seleccionar</Link>
+                <Link className="btn" id="boton" to={{
+                  pathname:'/personalizaPizza',
+                  state: {
+                    nom: ''+this.nomPizza,
+                    descrip: ''+this.descripPizza
+
+                }
+                }}>Seleccionar</Link>
               </div>
             </div>
           </div>
