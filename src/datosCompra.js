@@ -83,8 +83,6 @@ function WarningBanner(props) {
     </div>    
   );
 }
-
-
 class DatosCompra extends Component {
     constructor(props) {
         super(props);

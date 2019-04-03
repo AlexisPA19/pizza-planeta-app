@@ -24,33 +24,37 @@ class MetodoPago extends Component {
           <div id="datosPagoForm">
             <h3>Selecciona tu método de pago</h3>
             <h5>Los campos marcados con * son obligatorios</h5>
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit} className="was-validated">
               <div className="form-group row">
                 <div className="col-sm-1">
-                    <input type="checkbox" class="form-check-input" value=""/>
+                    <input type="checkbox" class="form-check-input" value="" required/>
                 </div>
                 <label for="staticEmail" className="col-sm-2 col-form-label">* Tarjeta</label>
                 </div>
               <div className="form-group row">
                 <label for="staticEmail" className="col-sm-2 col-form-label">* Numero de tarjeta</label>
                 <div className="col-sm-10">
-                    <input type="text" class="form-control" id="numTarj" placeholder="XXXX-XXX-XXX-XXX"/>
+                    <input type="number" class="form-control" id="numTarj" placeholder="XXXX-XXX-XXX-XXX" required/>
+                    <div className="invalid-feedback">El campo Numero de tarjeta es obligatorio.</div>
                 </div>
               </div>
               <div className="form-group row">
                 <label for="staticEmail" className="col-sm-2 col-form-label">* Titular</label>
                 <div className="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Nombre del titular de la tarjeta"/>
+                    <input type="text" class="form-control" id="inputEmail4" placeholder="Nombre del titular de la tarjeta" required/>
+                    <div className="invalid-feedback">El campo titular es obligatorio.</div>
                 </div>
               </div>
               <div className="form-group row">
                 <label for="inputEmail4" className="col-sm-2 col-form-label">* MM / AA</label>
                 <div class="form-group col-md-4">
-                    <input type="date" class="form-control" id="inputEmail4"/>
+                    <input type="date" class="form-control" id="inputEmail4" required/>
+                    <div className="invalid-feedback">El campo MM / AA es obligatorio.</div>
                 </div>
                 <label for="inputPassword4">* CVC</label>
                 <div class="form-group col-md-5">
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="XXX"/>
+                    <input type="number" class="form-control" id="inputPassword4" placeholder="XXX" required/>
+                    <div className="invalid-feedback">El campo CVC es obligatorio.</div>
                 </div>
               </div>
               <div className="form-group row">
