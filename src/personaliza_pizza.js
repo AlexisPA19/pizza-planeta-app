@@ -13,6 +13,14 @@ import 'firebase/database';
 class PersonalizaPizza extends Component {
   constructor () {
     super();
+    this.state = {
+      pizzas: [
+        {nomPizza:'Hola',descripPizza:'sadsa'}
+      ]
+  }
+  }
+  removePizza(nomPizza) {
+    //this.state.pizzas.nomPizza="Hola"
   }
   componentWillMount(){
     // Initialize Firebase
@@ -40,9 +48,11 @@ class PersonalizaPizza extends Component {
       const tamPizza = document.getElementById("tamPizza"); // Obtenemos la referencia a cada uno de nuestros elementos del formulario
       const tipoMasa = document.getElementById("tipoMasa");
       const cant = document.getElementById("cant");
+      const name = document.getElementById("nomPizza");
+      const descripPizza = document.getElementById("descripPizza");
       const data = {
-        'nomPizza':'Pepperoni',
-        'descripPizza':'Pepperoni y queso cheddar',
+        'nomPizza': name.value,
+        'descripPizza':descripPizza.value,
         'tamPizza': tamPizza.value,
         'tipoMasa': tipoMasa.value,
         'cant': cant.value,
@@ -103,6 +113,10 @@ class PersonalizaPizza extends Component {
                       <option value="10">10</option>
                   </select>
                 </div>
+              </div>
+              <div className="form-group row">
+                <input type="hidden" id="nomPizza" value={this.state.pizzas.nomPizza}>{this.state.pizzas.nomPizza}</input>
+                <input type="hidden" id="descripPizza" value={this.state.pizzas.descripPizza}>{this.state.pizzas.descripPizza}</input>
               </div>
               <div className="form-row">
                   <div className=" col-sm-7">
