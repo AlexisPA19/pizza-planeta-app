@@ -11,12 +11,11 @@ class MetodoPago extends Component {
       }
     
       handleChange(event) {
-        this.setState({value: event.target.value});
+        
       }
     
       handleSubmit(event) {
-        alert('Your favorite flavor is: ' + this.state.value);
-        event.preventDefault();
+
       }
     
       render() {
@@ -34,7 +33,7 @@ class MetodoPago extends Component {
               <div className="form-group row">
                 <label for="staticEmail" className="col-sm-2 col-form-label">* Numero de tarjeta</label>
                 <div className="col-sm-10">
-                    <input type="number" class="form-control" id="numTarj" placeholder="XXXX-XXX-XXX-XXX" required/>
+                    <input type="number" class="form-control" id="numTarj" placeholder="XXXX-XXX-XXX-XXX" required />
                     <div className="invalid-feedback">El campo Numero de tarjeta es obligatorio.</div>
                 </div>
               </div>
@@ -53,7 +52,7 @@ class MetodoPago extends Component {
                 </div>
                 <label for="inputPassword4">* CVC</label>
                 <div class="form-group col-md-5">
-                    <input type="number" class="form-control" id="inputPassword4" placeholder="XXX" required/>
+                    <input type="number" class="form-control"  placeholder="XXX" required/>
                     <div className="invalid-feedback">El campo CVC es obligatorio.</div>
                 </div>
               </div>

@@ -106,7 +106,7 @@ class DatosCompra extends Component {
               <div className="form-group row">
                 <label for="staticEmail" className="col-sm-2 col-form-label">* Tipo de entrega</label>
                 <div className="col-sm-3">
-                  <select className="form-control"  onChange={this.handleToggleClick}>
+                  <select className="form-control"  onChange={this.handleToggleClick} required>
                     <option value="sucursal">En sucursal</option>
                     <option value="domicilio" onClick={this.handleToggleClick}>A domicilio</option>
                   </select>
@@ -122,7 +122,7 @@ class DatosCompra extends Component {
               <div className="form-group row">
                 <label for="inputEmail4" className="col-sm-2 col-form-label">* Teléfono</label>
                 <div class="form-group col-md-4">
-                    <input type="number" class="form-control" id="inputEmail4" placeholder="" required/>
+                    <input type="tel" class="form-control" id="inputEmail4" placeholder="" required/>
                     <div className="invalid-feedback">El campo Teléfono es obligatorio.</div>
                 </div>
                 <label for="inputPassword4">* Correo</label>
@@ -137,7 +137,6 @@ class DatosCompra extends Component {
                   <Link id="boton" className="btn btn-default" to={'/carritoCompra'}>Cancelar</Link>
                 </div>
                 <div className="col-sm-6">
-                
                   <Link id="boton"  className="btn btn-default" to={'/metodoPago'} >Continuar</Link>
                 </div>
               </div>
