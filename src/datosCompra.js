@@ -20,7 +20,7 @@ function WarningBanner(props) {
         </div>
         <label for="inputPassword4">* CP</label>
         <div class="form-group col-md-2">
-            <input type="number" class="form-control" id="inputPassword4" placeholder="" required/>
+            <input type="number" class="form-control" id="inputPassword4" placeholder=""  required/>
             <div className="invalid-feedback">El campo CP es obligatorio.</div>
         </div>
       </div>
@@ -137,7 +137,7 @@ class DatosCompra extends Component {
                   <Link id="boton" className="btn btn-default" to={'/carritoCompra'}>Cancelar</Link>
                 </div>
                 <div className="col-sm-6">
-                  <Link id="boton"  className="btn btn-default" to={'/metodoPago'} >Continuar</Link>
+                  <Link id="boton"   className="btn btn-default" to={'/metodoPago'} >Continuar</Link>
                 </div>
               </div>
             </form>
