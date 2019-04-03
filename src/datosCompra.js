@@ -122,7 +122,7 @@ class DatosCompra extends Component {
               <div className="form-group row">
                 <label for="inputEmail4" className="col-sm-2 col-form-label">* Teléfono</label>
                 <div class="form-group col-md-4">
-                    <input type="num" class="form-control" id="inputEmail4" placeholder="" required/>
+                    <input type="tel" class="form-control"  placeholder="" maxlength="10" required/>
                     <div className="invalid-feedback">El campo Teléfono es obligatorio.</div>
                 </div>
                 <label for="inputPassword4">* Correo</label>
