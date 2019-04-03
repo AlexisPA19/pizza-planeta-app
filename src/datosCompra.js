@@ -4,6 +4,7 @@ import './datosCompra.css';
 import firebase from 'firebase';
 
 
+
 function WarningBanner(props) {
   if (!props.warn) {
     return null;
@@ -15,22 +16,26 @@ function WarningBanner(props) {
         <label for="inputEmail4" className="col-sm-2 col-form-label">* Numero</label>
         <div class="form-group col-md-2">
             <input type="number" class="form-control" id="inputEmail4" placeholder="" required/>
+            <div className="invalid-feedback">El campo Numero es obligatorio.</div>
         </div>
         <label for="inputPassword4">* CP</label>
         <div class="form-group col-md-2">
             <input type="number" class="form-control" id="inputPassword4" placeholder="" required/>
+            <div className="invalid-feedback">El campo CP es obligatorio.</div>
         </div>
       </div>
       <div className="form-group row">
         <label for="staticEmail" className="col-sm-2 col-form-label">* Colonia</label>
         <div className="col-sm-10">
             <input type="text" class="form-control" id="inputEmail4" placeholder="" required/>
+            <div className="invalid-feedback">El campo Colonia es obligatorio.</div>
         </div>
       </div>
       <div className="form-group row">
         <label for="staticEmail" className="col-sm-2 col-form-label">* Delegación o municipio</label>
         <div className="col-sm-10">
             <input type="text" class="form-control" id="inputEmail4" placeholder="" required/>
+            <div className="invalid-feedback">El campo Delegacion o municipio es obligatorio.</div>
         </div>
       </div>
       <div className="form-group row">
@@ -72,11 +77,13 @@ function WarningBanner(props) {
             <option value="Yucatán" >Yucatán</option>
             <option value="Zacatecas" >Zacatecas</option>
           </select>
+          <div className="invalid-feedback">El campo Estado es obligatorio.</div>
         </div>
       </div>
     </div>    
   );
 }
+
 
 class DatosCompra extends Component {
     constructor(props) {
@@ -91,12 +98,13 @@ class DatosCompra extends Component {
           showWarning: !prevState.showWarning
         }));
       }
+      
       render() {
         return (
           <div id="datosForm">
             <h3>Agrega tus datos para proceder con la compra</h3>
             <h5>Los campos marcados con * son obligatorios</h5>
-            <form>
+            <form className="was-validated">
               <div className="form-group row">
                 <label for="staticEmail" className="col-sm-2 col-form-label">* Tipo de entrega</label>
                 <div className="col-sm-3">
@@ -110,18 +118,19 @@ class DatosCompra extends Component {
                 <label for="staticEmail" className="col-sm-2 col-form-label">* Nombre</label>
                 <div className="col-sm-10">
                     <input type="text" class="form-control" placeholder="Nombre - Apellidos"  id="uname"  name="uname" required/>
+                    <div className="invalid-feedback">El campo Nombre es obligatorio.</div>
                 </div>
-                <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Please fill out this field.</div>
               </div>
               <div className="form-group row">
                 <label for="inputEmail4" className="col-sm-2 col-form-label">* Teléfono</label>
                 <div class="form-group col-md-4">
                     <input type="number" class="form-control" id="inputEmail4" placeholder="" required/>
+                    <div className="invalid-feedback">El campo Teléfono es obligatorio.</div>
                 </div>
                 <label for="inputPassword4">* Correo</label>
                 <div class="form-group col-md-5">
                     <input type="email" class="form-control" id="inputPassword4" placeholder="email@dom.dom" required/>
+                    <div className="invalid-feedback">El campo Correo es obligatorio.</div>
                 </div>
               </div>
                 <WarningBanner warn={this.state.showWarning} />

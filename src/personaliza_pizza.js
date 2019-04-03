@@ -15,7 +15,7 @@ class PersonalizaPizza extends Component {
     super();
     this.state = {
       pizzas: [
-        {nomPizza:'',descripPizza:''}
+        {nomPizza:'Hola',descripPizza:'sadsa'}
       ]
   }
   }

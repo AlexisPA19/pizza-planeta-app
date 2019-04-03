@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 class MetodoPago extends Component {
     constructor(props) {
         super(props);
-        this.state = {value: 'Grande'};
+        
     
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -54,8 +54,13 @@ class MetodoPago extends Component {
                 </div>
               </div>
               <div className="form-group row">
-                <div className="col-sm-1">
-                    <input type="checkbox" class="form-check-input" value=""/>
+                <div className="col-sm-2">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick"/>
+                <input type="hidden" name="hosted_button_id" value="7XKJUQUKVDJ6C"/>
+                <input type="image" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea."/>
+                <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1"/>
+                </form>
                 </div>
                 <label for="staticEmail" className="col-sm-2 col-form-label">* Paypal</label>
               </div>
