@@ -14,7 +14,7 @@ class Carrito extends Component {
     super();
     this.state = {
         pizzas: [
-
+          
         ]
     }
     this.removepizza = this.removePizza.bind(this);
@@ -23,6 +23,7 @@ class Carrito extends Component {
       this.app = firebase.initializeApp(DB_CONFIG);
   }
 }
+
 
 componentDidMount() {
   const { pizzas } = this.state;
